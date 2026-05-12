@@ -1,0 +1,42 @@
+def executar_insertion_sort(lista):
+    n = len(lista)
+    for i in range(1, n):
+        valor_inserir = lista[i] # Guarda o valor a ser inserido
+        j = i - 1 # calcula a primeira posição anterior ao valor
+        
+        print(f'Inserir o {valor_inserir} que está na posição de análise [{i}] ')
+        
+        while j >= 0 and lista[j] > valor_inserir: # itera sobre os valores nas posições anteriores, até achar a posição correta para inserir
+            lista[j + 1] = lista[j] # se o valor anterior for maior, copia o valor para a próxima posição
+            
+            print(f'No while: Valor anterior é {lista[j]} que está na pos[{j}] - lista no while = {lista}')
+            j -= 1 # diminui o índice até chegar na posição correta
+        lista[j + 1] = valor_inserir # Armazena na posição adequada o valor a ser inserido
+        
+        print(f'Pós while: posição de análise [{i}], posição anterior[{j}] - lista pós while= {lista}')
+        print('------------')
+    
+    return lista
+
+executar_insertion_sort([10, 9, 5, 8, 11])
+
+
+
+(resultado )
+Inserir o 9 que está na posição de análise [1] 
+No while: Valor anterior é 10 que está na pos[0] - lista no while = [10, 10, 5, 8, 11]
+Pós while: posição de análise [1], posição anterior[-1] - lista pós while= [9, 10, 5, 8, 11]
+------------
+Inserir o 5 que está na posição de análise [2] 
+No while: Valor anterior é 10 que está na pos[1] - lista no while = [9, 10, 10, 8, 11]
+No while: Valor anterior é 9 que está na pos[0] - lista no while = [9, 9, 10, 8, 11]
+Pós while: posição de análise [2], posição anterior[-1] - lista pós while= [5, 9, 10, 8, 11]
+------------
+Inserir o 8 que está na posição de análise [3] 
+No while: Valor anterior é 10 que está na pos[2] - lista no while = [5, 9, 10, 10, 11]
+No while: Valor anterior é 9 que está na pos[1] - lista no while = [5, 9, 9, 10, 11]
+Pós while: posição de análise [3], posição anterior[0] - lista pós while= [5, 8, 9, 10, 11]
+------------
+Inserir o 11 que está na posição de análise [4] 
+Pós while: posição de análise [4], posição anterior[3] - lista pós while= [5, 8, 9, 10, 11]
+------------
