@@ -1,0 +1,10 @@
+1. Qual endereço IP apareceu? 
+142.250.219.238
+2. Quantos pacotes foram enviados?
+440
+3. Quantos foram recebidos?
+minimo 6 ms
+4. Houve perda de pacotes?
+maximo 10 ms
+5. Qual foi aproximadamente o tempo de resposta?
+Media 7ms
