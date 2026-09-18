@@ -1,0 +1,62 @@
+import java.util.*;
+
+public class Main {
+  public static void main(String[] args) {
+    Pessoa pessoa1 = new Pessoa(
+      "Bianca",
+      "222.222.222-22"
+    );
+
+    Pessoa pessoa2 = new Pessoa(
+      "Michael",
+      "111.111.111-11"
+    );
+    pessoa1.exibirDados();
+    pessoa2.exibirDados();
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class NewClass1 {
+  private String nome;
+  private String cpf;
+
+public Pessoa(String nome, String cpf) {
+   this.nome = nome;
+   this.cpf = cpf;
+}
+
+ public String getnome () {
+  return nome;
+ }
+ 
+public String getcpf() {
+  return cpf;
+ }
+
+public void exibirDados() {
+  System.out.println("nome: " + nome);
+  System.out.println("cpf: " + cpf);
+}
+
+}
+
+
+
+
